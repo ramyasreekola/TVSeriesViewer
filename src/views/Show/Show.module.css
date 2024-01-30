@@ -1,0 +1,126 @@
+.container {
+  padding-left: 16vw;
+  padding-right: 16vw;
+  padding-bottom: 13vh;
+}
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  padding-top: 32px;
+}
+
+.backButton {
+  display: flex;
+  color: white;
+  width: 100%;
+  font-family: "Helvetica";
+  font-size: 16px;
+  gap: 12px;
+  background-color: #000;
+  padding: 12px 27px;
+  border-radius: 5px;
+  margin: 40px auto 40px;
+}
+.showDetails {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+  padding: 20px;
+  max-width: 860px;
+}
+
+.showImage {
+  width: 270px;
+  height: fit-content;
+}
+
+.showContainer{
+    padding-left: 1.5rem;
+}
+.showContent {
+  flex: 1;
+  color: white;
+}
+
+.showTitle {
+  margin-top: 0;
+}
+
+.showGenres {
+  font-style: italic;
+}
+
+.showSummary {
+  font-size: 18px;
+}
+
+.showCast {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  column-gap: 110px;
+  row-gap: 30px;
+  margin-top: 10px;
+}
+
+.castImage {
+  max-width: 53px; 
+}
+
+.castTitle{
+    color: white;
+    margin-top: 40px;
+}
+.castName {
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 16px;
+  text-align: left; 
+}
+
+.castCharacter {
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+  text-align: left; 
+}
+
+/* Adds responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 13vh;
+  }
+
+  .searchBox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .backButton {
+    width: 70%;
+  }
+  .showDetails {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .showContent {
+    width: 70%;
+  }
+}
+
+/* Adds responsiveness for mobile view */
+@media (max-width: 486px) {
+  .showCast {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(100px, 1fr)
+    );
+    gap: 50px;
+  }
+}
