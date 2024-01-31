@@ -1,9 +1,10 @@
-import styles from "./NotFound.module.css";
+import React from 'react'
+import styles from './NotFound.module.css'
 
 interface ErrorProps {
-  message: string;
+  message: string
 }
-const NotFound = () => {
+const NotFound: React.FC = () => {
   return (
     <article>
       <section>
@@ -11,12 +12,12 @@ const NotFound = () => {
           <h1> Page not found</h1>
         </header>
         <main className={styles.body}>
-          <span>We have looked all around but haven't found what you've been looking for.</span>
+          <span>We have looked all around but haven&apos;t found what you&apos;ve been looking for.</span>
         </main>
       </section>
     </article>
-  );
-};
+  )
+}
 
 const Error: React.FC<ErrorProps> = ({ message }) => {
   return (
@@ -30,6 +31,6 @@ const Error: React.FC<ErrorProps> = ({ message }) => {
         </main>
       </section>
     </article>
-  );
-};
-export { NotFound, Error };
+  )
+}
+export { NotFound, Error }

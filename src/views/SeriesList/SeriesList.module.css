@@ -12,6 +12,10 @@
   padding-bottom: 32px;
 }
 
+.noResults {
+  color:antiquewhite;
+}
+
 .seriesList {
   display: grid;
   gap: 30px; 

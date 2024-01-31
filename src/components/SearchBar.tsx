@@ -1,23 +1,25 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import styles from "./SearchBar.module.css";
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import styles from './SearchBar.module.css'
 
 interface SearchBarProps {
-  onSearch: (searchTerm: string) => void;
+  onSearch: (searchTerm: string) => void
 }
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState<string>("");
-  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState<string>('')
+  const navigate = useNavigate()
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
-  };
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    setSearchTerm(event.target.value)
+  }
 
-  const handleSearch = () => {
-    onSearch(searchTerm);
-    navigate("/series");
-  };
+  const handleSearch = (): void => {
+    onSearch(searchTerm)
+    navigate('/series')
+  }
 
   return (
     <div className={styles.searchButtonContainer}>
@@ -32,7 +34,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
         Search
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

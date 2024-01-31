@@ -43,3 +43,4 @@ Following features are the considerations to include in the application for bigg
 5. Add More test cases for the components
 6. Better Error Handling for API call fail 
 7. Search button on Enter key press should trigger the search
+8. Add a global Theme with defined background and text colors.

@@ -1,23 +1,23 @@
-import { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./views/Home";
-import { NotFound, Error } from "./views/404";
-import SeriesList from "./views/SeriesList";
-import ShowComponent from "./views/Show";
-import { fetchSeriesList } from "./api/utils";
-import { SeriesResponse } from "./types/series";
-import styles from "./styles/global.module.css";
+import React, { useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './views/Home'
+import { NotFound, Error } from './views/404'
+import SeriesList from './views/SeriesList'
+import ShowComponent from './views/Show'
+import { fetchSeriesList } from './api/utils'
+import { type SeriesResponse } from './types/series'
+import styles from './styles/global.module.css'
 
 const App: React.FC = () => {
-  const [seriesList, setSeriesList] = useState<SeriesResponse[]>([]);
-  const [error, setError] = useState<string | null>(null);
+  const [seriesList, setSeriesList] = useState<SeriesResponse[]>([])
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSearch = (searchTerm: string) => {
-    fetchSeriesList(setSeriesList, setError, searchTerm);
-  };
+  const handleSearch = (searchTerm: string): void => {
+    void fetchSeriesList(setSeriesList, setError, searchTerm)
+  }
 
-  if (error) {
-    return <Error message={error} />;
+  if (error != null) {
+    return <Error message={error} />
   }
 
   return (
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         </Routes>
       </BrowserRouter>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
